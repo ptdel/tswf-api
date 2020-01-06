@@ -47,11 +47,9 @@ or
 ## NGINX
 
 It's assumed that the API and Player are sitting behind NGINX.
-Included in this repository are example `api.conf` and `rtmp.conf`.
-These are stored under the `nginx/` directory. The `api.conf` should
-be included within the `http` block of your `nginx.conf`, with
-`rtmp.conf` under it's own block.  An example `nginx.conf` is provided
-below:
+Included in this repository is an example api.conf. The `api.conf`
+should be included within the `http` block of your `nginx.conf`.
+An example `nginx.conf` is provided below:
 
 ```
 user  nginx;
@@ -77,10 +75,6 @@ http {
 
 include /etc/nginx/conf.d/rtmp.conf;
 ```
-NGINX needs to be built with the RTMP Module in order to serve
-player content.  Compile NGINX with the following `./configure`
-flag:
-```--add-module=/path/to/nginx-rtmp-module```
 
 If you are running NGINX on another host, you will need to modify
 `api.conf` and `rtmp.conf` to point to the address of the NGINX
