@@ -1,0 +1,9 @@
+*.pyc
+__pycache__/
+.vscode/
+.eggs/
+*.egg-info/
+.env
+.releaserc
+.mypy_cache/
+.coverage
