@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 cwd = os.path.abspath(os.path.dirname(__file__))
 
-requires = ["Flask>=1.1.1", "requests>=2.22.0", "httpretty>=0.9.6"]
+requires = ["Flask>=1.1.1", "requests>=2.22.0", "httpretty>=0.9.6", "toml"]
 
 setup(
     name="tswf",

@@ -1,0 +1,10 @@
+[server]
+host = "127.0.0.1"
+port = 8080
+debug = true
+
+[api]
+vote_threshold = 3
+ip_whitelist = ["127.0.0.1"]
+restart_url = "http://127.0.0.1:8081/restart"
+ssl_verify = false
