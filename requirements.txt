@@ -1,3 +1,5 @@
 flask
 httpretty
 requests
+sphinx
+toml
