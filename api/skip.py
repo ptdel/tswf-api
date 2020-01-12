@@ -4,6 +4,14 @@ from config import settings
 
 
 class Skip(list):
+    """ Elects to skip the currently playing song.  Will call the player to
+    restart when enough votes have been received from different users.
+
+    .. todo:: move some functionality of this class to the /restart route.
+    .. todo:: move ip_whitelist into it's own module
+    .. todo:: this functionality will eventually be replaced by proper auth.
+    """
+
     def __init__(self):
         self.votecount = 0
         self.ip_whitelist = settings.api.ip_whitelist
@@ -23,6 +31,7 @@ class Skip(list):
                 return r
 
     def reset(self):
+        """ resets vote count to zero. """
         self.votecount = 0
         self.clear()
 

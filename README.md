@@ -30,6 +30,15 @@ The API is simple, with more functionality on the way as time permits.
 Getting Started
 ---------------
 
+You can build full documentation for this project by doing the following:
+```
+$ cd doc/
+$ make html
+$ make -b coverage
+```
+generated documentation is stored in `doc/build/html`, with a report of any
+undocumented code in `doc/build/coverage`.
+
 This project is intended to be run with docker-compose. Depending on
 what operating system you are using, you may want to grab it from your
 package manager, or directly from upstream.
