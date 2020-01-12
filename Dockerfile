@@ -1,5 +1,7 @@
 FROM python:alpine
 
+ENV PYTHONPATH api
+
 WORKDIR /api
 
 VOLUME /usr/share/html

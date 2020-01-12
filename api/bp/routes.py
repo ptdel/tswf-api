@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, request
 from music_queue import playlist
+from metadata import Metadata
 from errors import BadRequest, MethodNotAllowed
 from skip import votetoskip
 
@@ -38,7 +39,7 @@ def up_next():
 
       /next
 
-    :return: { "Nect": <song_url> }
+    :return: { "Next": <song_url> }
     :rtype: json
 
     """
@@ -97,7 +98,7 @@ def clear():
 
 
 @api.route("/current")
-def np():
+def current():
     """
     Returns the song currently playing in the queue.  This
 
@@ -109,7 +110,8 @@ def np():
     :rtype: json
 
     """
-    return jsonify({"Current": playlist.current_song})
+    metadata = Metadata(playlist.current_song)
+    return jsonify(metadata.to_dict())
 
 
 @api.route("/skip")

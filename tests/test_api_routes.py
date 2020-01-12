@@ -28,8 +28,10 @@ def test_route_skip_failure(test_api):
 
 
 def test_route_submit(test_api):
-    r = test_api.get("/api/submit?song=test")
-    assert r.get_json()["Added"] == "test"
+    r = test_api.get(
+        "/api/submit?song=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DEpoXqIRS8Ts"
+    )
+    assert r.get_json()["Added"] == "https://www.youtube.com/watch?v=EpoXqIRS8Ts"
     assert r.status_code == 200
 
 
@@ -46,19 +48,21 @@ def test_route_stat(test_api):
 
 def test_route_queue(test_api):
     r = test_api.get("/api/queue")
-    assert r.get_json() == ["test"]
+    assert r.get_json() == ["https://www.youtube.com/watch?v=EpoXqIRS8Ts"]
     assert r.status_code == 200
 
 
 def test_route_next(test_api):
     r = test_api.get("/api/next")
-    assert r.get_json()["Next"] == "test"
+    assert r.get_json()["Next"] == "https://www.youtube.com/watch?v=EpoXqIRS8Ts"
     assert r.status_code == 200
 
 
 def test_route_current(test_api):
     r = test_api.get("/api/current")
-    assert r.get_json()["Current"] == "test"
+    assert r.get_json()["title"] == "Linkwood - Love Lost"
+    assert r.get_json()["duration"] == "00:07:05"
+    assert r.get_json()["url"] == "https://www.youtube.com/watch?v=EpoXqIRS8Ts"
     assert r.status_code == 200
 
 
