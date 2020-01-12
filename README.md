@@ -1,6 +1,11 @@
 Tasty Shapes With Friends - API
 ===============================
 
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen)](http://opensource.org/licenses/MIT)
+![Release](https://img.shields.io/github/workflow/status/ptdel/tswf-api/Release)
+![Unit Tests](https://img.shields.io/github/workflow/status/ptdel/tswf-api/Python%20package)
+
+
 A tiny SaaS for sharing song links with your friends over a common stream.
 
 About
