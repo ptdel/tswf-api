@@ -106,7 +106,7 @@ def current():
 
       /current
 
-    :return: { "Current": <song_url> }
+    :return: { "title": title, "duration": duration, "url": url }
     :rtype: json
 
     """
