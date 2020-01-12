@@ -1,5 +1,7 @@
 flask
 httpretty
+pafy
 requests
 sphinx
 toml
+youtube_dl
