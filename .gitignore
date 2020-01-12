@@ -4,6 +4,5 @@ __pycache__/
 .eggs/
 *.egg-info/
 .env
-.releaserc
 .mypy_cache/
 .coverage
