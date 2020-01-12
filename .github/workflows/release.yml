@@ -15,10 +15,11 @@ jobs:
         with:
           node-version: "13.x"
       - run: |
-          npx semantic-release                      \
+          npm install -g semantic-release           \
           "@semantic-release/changelog"             \
           "@semantic-release/commit-analyzer"       \
           "@semantic-release/git"                   \
           "@semantic-release/release-notes-generator"
+          npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE }}
