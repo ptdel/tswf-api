@@ -4,7 +4,7 @@ from pathlib import Path
 
 #: Path of the configuration file from an unpacked Path list.
 conf_file: Path
-(conf_file,) = list(Path.cwd().parent.glob("**/conf.toml"))
+(conf_file,) = list(Path.cwd().glob("**/conf.toml"))
 
 
 class Settings:
